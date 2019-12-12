@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Statical analises behind my thesis</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Vitor Muller Anunciato" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Statical analises behind my thesis
+### Vitor Muller Anunciato
+### December 12th, 2019 (updated: 2019-12-12)
+
+---
+
+
+.pull-left[
+##Vitor Muller Anunciato##
+
+🎓
+
+PhD candidate in Crop Protection (Weedscience), [UNESP](https://www.fca.unesp.br/#!/international/eng/), current.
+
+Msc in Crop Protection (Weedscience), [UNESP](https://www.fca.unesp.br/#!/international/eng/), 2018.
+
+BSc in Agronomy, [UEL](http://www.uel.br/portal/en/pages/en.php?lang=PT), 2016.
+
+
+📧 
+
+vitor.muller@gmail.com
+[@vitor_anunciato](https://twitter.com/vitor_anunciato)
+[serialweedkiller.com](https://serialweedkiller.netlify.com/)
+
+]
+
+.pull-right[
+##Summary##
+
+- What is hormesis?
+
+- Thesis objective
+
+- My hypotesis
+
+- Material and Methods
+
+- Key results
+
+- Conclusion
+]
+---
+#What is hormesis?#
+.pull-left[
+"All things are poison and nothing (is) without poison; only the dose makes that a thing is no poison."
+
+*Paracelsus (1493-1541)*
+]
+--
+.pull-right[
+![hormesis](https://media.giphy.com/media/QztqDnTHYapKE/giphy.gif)]
+---
+#What is a posion?#
+&lt;img src="img/dl-adapted.png" width="100%" /&gt;
+Source: adapted from [sciencematters.com](https://sciencemattersca.com/about/science-101/)
+---
+class:inverse
+###Normal dose response glyphosate vs. susceptible *D.insularis* ###
+&lt;img src="img/drc.png" width="150%" /&gt;
+
+.pull-left[0 g ea ha-¹] 
+.right[64000 g ea ha-¹]
+---
+class:inverse
+###Glyphosate in growth stimulus in *D.insularis* ###
+&lt;img src="img/horm.png" width="150%" /&gt;
+
+.pull-left[0 g ea ha-¹] 
+.right[720 g ea ha-¹]
+---
+#Thesis objective#
+
+Evaluate the effect of glyphosate herbicide in the growth of * Digitaria insularis.*
+
+--
+
+#My hypotesis#
+H0: glyphosate can't stimulate the growth of *Digitaria insularis*
+H1: glyphosate can stimulate the growth of *Digitaria insularis*
+
+---
+#Material and methods#
+`$$f(x) = c + \frac{d-c}{1+\exp(b(\log(x)-\log(e)))}$$`
+
+Source: Seber, G. A. F. and Wild, C. J (1989) Nonlinear Regression, New York: Wiley &amp; Sons (p. 330).
+
+
+
+`$$f(x) = c + \frac{d-c+fx}{1+\exp(b(\log(x)-\log(e)))}$$`
+
+Source: Brain, P. and Cousens, R. (1989) An equation to describe dose responses where there is stimulation of growth at low doses, Weed Research, 29, 93--96. 
+---
+##Model adjustment##
+
+
+
+```r
+lettuce.m1 &lt;- drm(lettuce[,c(2,1)], fct=BC.5())
+lettuce.m2 &lt;- drm(lettuce[,c(2,1)], fct=LL.4())
+```
+.pull-left[
+
+```r
+plot(lettuce.m1)
+```
+
+![](SBMT_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
+]
+.pull-right[
+
+```r
+plot(lettuce.m2)
+```
+
+![](SBMT_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
+]
+---
+## Model parameters BC.5 ##
+
+```r
+summary(lettuce.m1)
+```
+
+```
+## 
+## Model fitted: Brain-Cousens (hormesis) (5 parms)
+## 
+## Parameter estimates:
+## 
+##               Estimate Std. Error t-value   p-value    
+## b:(Intercept) 1.502065   0.352231  4.2644  0.002097 ** 
+## c:(Intercept) 0.280173   0.248569  1.1271  0.288836    
+## d:(Intercept) 0.963030   0.078186 12.3171 6.164e-07 ***
+## e:(Intercept) 1.120457   0.612908  1.8281  0.100799    
+## f:(Intercept) 0.988182   0.776136  1.2732  0.234846    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error:
+## 
+##  0.1149117 (9 degrees of freedom)
+```
+---
+## Model parameters LL.4 ##
+
+```r
+summary(lettuce.m2)
+```
+
+```
+## 
+## Model fitted: Log-logistic (ED50 as parameter) (4 parms)
+## 
+## Parameter estimates:
+## 
+##               Estimate Std. Error t-value   p-value    
+## b:(Intercept) 1.383314   0.647270  2.1372   0.05831 .  
+## c:(Intercept) 0.372180   0.141193  2.6360   0.02491 *  
+## d:(Intercept) 1.101071   0.064231 17.1423 9.633e-09 ***
+## e:(Intercept) 8.607125   5.175525  1.6630   0.12728    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error:
+## 
+##  0.143901 (10 degrees of freedom)
+```
+---
+## Model compairason BC.5 vs LL.4 ##
+
+```r
+anova(lettuce.m1, lettuce.m2)
+```
+
+```
+## 
+## 1st model
+##  fct:      LL.4()
+## 2nd model
+##  fct:      BC.5()
+```
+
+```
+## ANOVA table
+## 
+##           ModelDf     RSS Df F value p value
+## 2nd model      10 0.20708                   
+## 1st model       9 0.11884  1  6.6819  0.0295
+```
+---
+#Results#
+&lt;img src="img/ac5.png" width="150%" /&gt;
+---
+#Results#
+&lt;img src="img/ac10.png" width="150%" /&gt;
+---
+#7 DAA#
+&lt;img src="img/hormesis7DAA.jpg" width="150%" /&gt;
+---
+#15 DAA#
+&lt;img src="img/hormesis15DAA.jpg" width="150%" /&gt;
+---
+#21 DAA#
+&lt;img src="img/hormesis21DAA.jpg" width="150%" /&gt;
+---
+#28 DAA#
+&lt;img src="img/hormesis28DAA.jpg" width="150%" /&gt;
+---
+#41 DAA#
+&lt;img src="img/hormesis41DAA.jpg" width="150%" /&gt;
+---
+#48 DAA#
+&lt;img src="img/hormesis48DAA.jpg" width="150%" /&gt;
+---
+class:inverse
+#Conclusion#
+Glyphosate can stimulate the growth of the *Digitaria insularis* up to 60%.
+
+
+.right[*Thank you*]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
