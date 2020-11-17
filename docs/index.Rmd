@@ -1,5 +1,5 @@
 ---
-title: "Statical analises behind my thesis"
+title: "Statical analysis behind my thesis"
 author: "Vitor Muller Anunciato"
 date: "December 12th, 2019 (updated: `r Sys.Date()`)"
 output:
