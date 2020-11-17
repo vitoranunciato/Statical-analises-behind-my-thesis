@@ -61,7 +61,7 @@ vitor.muller@gmail.com
 ---
 #What is a posion?#
 <div align="center">
-<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/doc/img/dl-adapted.png?raw=true" width=700 height=450>
+<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/docs/img/dl-adapted.png?raw=true" width=700 height=450>
 </div>
 
 Source: adapted from [sciencematters.com](https://sciencemattersca.com/about/science-101/)
@@ -69,7 +69,7 @@ Source: adapted from [sciencematters.com](https://sciencemattersca.com/about/sci
 class:inverse
 ###Normal dose response glyphosate vs. susceptible *D.insularis* ###
 <div align="center">
-<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/doc/img/drc.png?raw=true" width=800 height=450>
+<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/docs/img/drc.png?raw=true" width=800 height=450>
 </div>
 
 .pull-left[0 g ea ha-¹] 
@@ -78,7 +78,7 @@ class:inverse
 class:inverse
 ###Glyphosate in growth stimulus in *D.insularis* ###
 <div align="center">
-<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/doc/img/horm.png?raw=true" width=800 height=450>
+<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/docs/img/horm.png?raw=true" width=800 height=450>
 </div>
 .pull-left[0 g ea ha-¹] 
 .right[720 g ea ha-¹]
@@ -142,42 +142,42 @@ anova(lettuce.m1, lettuce.m2)
 ---
 #Results#
 <div align="center">
-<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/doc/img/ac5.png?raw=true" width=800 height=500>
+<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/docs/img/ac5.png?raw=true" width=800 height=500>
 </div>
 ---
 #Results#
 <div align="center">
-<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/doc/img/ac10.png?raw=true" width=800 height=500>
+<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/docs/img/ac10.png?raw=true" width=800 height=500>
 </div>
 ---
 #7 DAA#
 <div align="center">
-<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/doc/img/hormesis7DAA.jpg?raw=true" width=800 height=480>
+<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/docs/img/hormesis7DAA.jpg?raw=true" width=800 height=480>
 </div>
 ---
 #15 DAA#
 <div align="center">
-<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/doc/img/hormesis15DAA.jpg?raw=true" width=800 height=480>
+<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/docs/img/hormesis15DAA.jpg?raw=true" width=800 height=480>
 </div>
 ---
 #21 DAA#
 <div align="center">
-<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/doc/img/hormesis21DAA.jpg?raw=true" width=800 height=480>
+<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/docs/img/hormesis21DAA.jpg?raw=true" width=800 height=480>
 </div>
 ---
 #28 DAA#
 <div align="center">
-<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/doc/img/hormesis28DAA.jpg?raw=true" width=800 height=480>
+<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/docs/img/hormesis28DAA.jpg?raw=true" width=800 height=480>
 </div>
 ---
 #41 DAA#
 <div align="center">
-<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/doc/img/hormesis41DAA.jpg?raw=true" width=800 height=480>
+<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/docs/img/hormesis41DAA.jpg?raw=true" width=800 height=480>
 </div>
 ---
 #48 DAA#
 <div align="center">
-<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/doc/img/hormesis48DAA.jpg?raw=true" width=800 height=480>
+<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/docs/img/hormesis48DAA.jpg?raw=true" width=800 height=480>
 </div>
 ---
 class:inverse
