@@ -22,12 +22,14 @@ Msc in Crop Protection (Weedscience), [UNESP](https://www.fca.unesp.br/#!/intern
 
 BSc in Agronomy, [UEL](http://www.uel.br/portal/en/pages/en.php?lang=PT), 2016.
 
-
 📧 
 
 vitor.muller@gmail.com
 [@vitor_anunciato](https://twitter.com/vitor_anunciato)
-[serialweedkiller.com](https://serialweedkiller.netlify.com/)
+
+🔪 [Serial Weed Killer](https://serialweedkiller.netlify.app/) 
+  
+🎧 [PapoAgro podcast](https://www.papoagro.com.br/) (@papoagropodcast)
 
 ]
 
@@ -58,26 +60,26 @@ vitor.muller@gmail.com
 ![hormesis](https://media.giphy.com/media/QztqDnTHYapKE/giphy.gif)]
 ---
 #What is a posion?#
-```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("img/dl-adapted.png")
-```
+<div align="center">
+<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/doc/img/dl-adapted.png?raw=true" width=700 height=450>
+</div>
+
 Source: adapted from [sciencematters.com](https://sciencemattersca.com/about/science-101/)
 ---
 class:inverse
 ###Normal dose response glyphosate vs. susceptible *D.insularis* ###
-```{r echo=FALSE, out.width="150%"}
-knitr::include_graphics("img/drc.png")
-```
+<div align="center">
+<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/doc/img/drc.png?raw=true" width=800 height=450>
+</div>
 
 .pull-left[0 g ea ha-¹] 
 .right[64000 g ea ha-¹]
 ---
 class:inverse
 ###Glyphosate in growth stimulus in *D.insularis* ###
-```{r echo=FALSE, out.width="150%"}
-knitr::include_graphics("img/horm.png")
-```
-
+<div align="center">
+<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/doc/img/horm.png?raw=true" width=800 height=450>
+</div>
 .pull-left[0 g ea ha-¹] 
 .right[720 g ea ha-¹]
 ---
@@ -139,44 +141,44 @@ anova(lettuce.m1, lettuce.m2)
 ```
 ---
 #Results#
-```{r echo=FALSE, out.width="150%"}
-knitr::include_graphics("img/ac5.png")
-```
+<div align="center">
+<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/doc/img/ac5.png?raw=true" width=800 height=500>
+</div>
 ---
 #Results#
-```{r echo=FALSE, out.width="150%"}
-knitr::include_graphics("img/ac10.png")
-```
+<div align="center">
+<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/doc/img/ac10.png?raw=true" width=800 height=500>
+</div>
 ---
 #7 DAA#
-```{r echo=FALSE, out.width="150%"}
-knitr::include_graphics("img/hormesis7DAA.jpg")
-```
+<div align="center">
+<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/doc/img/hormesis7DAA.jpg?raw=true" width=800 height=480>
+</div>
 ---
 #15 DAA#
-```{r echo=FALSE, out.width="150%"}
-knitr::include_graphics("img/hormesis15DAA.jpg")
-```
+<div align="center">
+<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/doc/img/hormesis15DAA.jpg?raw=true" width=800 height=480>
+</div>
 ---
 #21 DAA#
-```{r echo=FALSE, out.width="150%"}
-knitr::include_graphics("img/hormesis21DAA.jpg")
-```
+<div align="center">
+<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/doc/img/hormesis21DAA.jpg?raw=true" width=800 height=480>
+</div>
 ---
 #28 DAA#
-```{r echo=FALSE, out.width="150%"}
-knitr::include_graphics("img/hormesis28DAA.jpg")
-```
+<div align="center">
+<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/doc/img/hormesis28DAA.jpg?raw=true" width=800 height=480>
+</div>
 ---
 #41 DAA#
-```{r echo=FALSE, out.width="150%"}
-knitr::include_graphics("img/hormesis41DAA.jpg")
-```
+<div align="center">
+<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/doc/img/hormesis41DAA.jpg?raw=true" width=800 height=480>
+</div>
 ---
 #48 DAA#
-```{r echo=FALSE, out.width="150%"}
-knitr::include_graphics("img/hormesis48DAA.jpg")
-```
+<div align="center">
+<img src="https://github.com/vitoranunciato/Statical-analises-behind-my-thesis/blob/master/doc/img/hormesis48DAA.jpg?raw=true" width=800 height=480>
+</div>
 ---
 class:inverse
 #Conclusion#
